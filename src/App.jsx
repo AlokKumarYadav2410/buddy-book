@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from './Components/Navbar/Navbar'
+import ContactForm from './Components/ContactForm/ContactForm'
 
 const App = () => {
   return (
     <div className='w-full min-h-screen bg-(--bg-main) p-4'>
-      <h1>Buddy Book</h1>
+      <Navbar />
+      <ContactForm />
     </div>
   )
 }
