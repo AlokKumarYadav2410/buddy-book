@@ -73,11 +73,11 @@ const ContactForm = () => {
                     <input
                         onChange={(e) => setPhone(e.target.value)}
                         value={phone}
-                        type="tel" placeholder='Phone' className='mb-2 p-2 rounded border border-(--btn-main) w-full outline-(--btn-main)' />
+                        type="tel" placeholder='Phone Number' className='mb-2 p-2 rounded border border-(--btn-main) w-full outline-(--btn-main)' />
                     <input
                         type="file" name="" id="inputFile" className='mb-2 p-2 rounded border border-(--btn-main) w-full hidden' ref={fileInputRef} onChange={handleFileChange} />
                     <div
-                        className="mb-2 p-2 rounded border border-(--btn-main) w-full cursor-pointer outline-(--btn-main) hover:bg-(--btn-main)/10"
+                        className="mb-2 p-2 truncate rounded border border-(--btn-main) w-full cursor-pointer outline-(--btn-main) hover:bg-(--btn-main)/10"
                         onClick={handleFileClick}>{fileName}</div>
                     <button type="submit" className='w-full bg-(--btn-main) text-(--btn-sec) px-4 py-2 rounded hover:bg-(--btn-sec)/80 hover:text-(--bg-main) transition-all duration-300 cursor-pointer'>Add Contact</button>
                 </div>
