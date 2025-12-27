@@ -77,6 +77,15 @@ const ContactForm = () => {
                     />
                 )}
             </form>
+
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full auto-rows-fr'>
+                {data.length > 0 && (
+                    data.map((contact, idx) => (
+                        <ContactCard key={idx} name={contact.name} phone={contact.phone} image={contact.image} />
+                    ))
+                )}
+            </div>
+
         </div>
     )
 }
