@@ -1,0 +1,2 @@
+# BuddyBook – A React-based contact management app
+BuddyBook is a simple and intuitive contact management application built with React. It allows users to add, view, and manage their contacts efficiently.
