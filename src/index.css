@@ -1,32 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  /* --bg-main: #222831;
-  --bg-card: #393E46;
-  --primary: #00ADB5;
-  --text-main: #EEEEEE; */
 
   --bg-main: #FCF8F8;
   --bg-card: #FBEFEF;
-  --inp : #F9DFDF;
+  --inp: #F9DFDF;
   --btn-main: #F5AFAF;
   --text-main: #3A2B2B;
-  --btn-sec: #5A2A2A; 
+  --btn-sec: #5A2A2A;
+
+  /* --bg-main:  #F8FAFC;
+--bg-card:  #E2E8F0;
+--inp:      #CBD5E1;
+--btn-main: #38BDF8;
+--text-main:#0F172A;
+--btn-sec:  #0284C7; */
+
+/* --bg-main:  #0B0F14;
+--bg-card:  #111827;
+--inp:      #1F2937;
+--btn-main: #FACC15;   
+--text-main:#F9FAFB;
+--btn-sec:  #CA8A04; */
 }
 
-/* | UI Part         | Color     |
-| --------------- | --------- |
-| Page Background | `#222831` |
-| Navbar / Card   | `#393E46` |
-| Buttons / Icons | `#00ADB5` |
-| Text            | `#EEEEEE` | */
-
-
-
-/* | UI Part         | Color     |
-| --------------- | --------- |
-| Page background | `#FCF8F8` |
-| Contact cards / Navbar background / Form container | `#FBEFEF` |
-| Inputs / hover /Search bar / background on cards / Borders (soft) | `#F9DFDF` |
-| Buttons / icons | `#F5AFAF` |
-| Text            | `#3A2B2B` #2B2B2B | */
+body {
+  font-family: 'Cherry Cream Soda', system-ui;
+}
