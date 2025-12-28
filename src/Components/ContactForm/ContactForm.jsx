@@ -15,6 +15,11 @@ const ContactForm = () => {
 
     const [data, setData] = useState(localStorage.getItem("contacts") ? JSON.parse(localStorage.getItem("contacts")) : []);
 
+    function handlePhoneChange(e) {
+        const value = e.target.value.replace(/[^0-9]/g, "");
+        setPhone(value);
+    }
+
     function handleFileClick() {
         fileInputRef.current.click();
     }
@@ -33,6 +38,13 @@ const ContactForm = () => {
             setFileName("Upload Profile Image");
             setPreview(null);
         }
+    }
+
+    const deleteHandler = (index) => {
+        const copyUser = [...data];
+        copyUser.splice(index, 1);
+        setData(copyUser);
+        localStorage.setItem("contacts", JSON.stringify(copyUser));
     }
 
     function handleSubmit(event) {
@@ -58,6 +70,7 @@ const ContactForm = () => {
         setFileName("Upload Profile Image");
         setName("");
         setPhone("");
+        fileInputRef.current.value = "";
     }
 
     return (
@@ -71,7 +84,7 @@ const ContactForm = () => {
                         type="text" placeholder='Name'
                         className='mb-2 p-2 rounded border border-(--btn-main) w-full outline-(--btn-main)' />
                     <input
-                        onChange={(e) => setPhone(e.target.value)}
+                        onChange={handlePhoneChange}
                         value={phone}
                         type="tel" placeholder='Phone Number' className='mb-2 p-2 rounded border border-(--btn-main) w-full outline-(--btn-main)' />
                     <input
@@ -93,7 +106,7 @@ const ContactForm = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full'>
                 {data.length > 0 && (
                     data.map((contact, idx) => (
-                        <ContactCard key={idx} name={contact.name} phone={contact.phone} image={contact.image} />
+                        <ContactCard key={idx} name={contact.name} phone={contact.phone} image={contact.image} onDelete={() => deleteHandler(idx)} />
                     ))
                 )}
             </div>
